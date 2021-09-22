@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Game Suit Challenge</string>
+    <string name="com">COM</string>
+    <string name="versus">Versus</string>
+    <string name="player">Player 1</string>
+    <string name="draw">DRAW</string>
+    <string name="win">Player 1\n Wins</string>
+    <string name="lose">COM Win</string>
 </resources>
