@@ -14,4 +14,9 @@
     <string name="retry">Retry</string>
     <string name="splashscreen1">SplashScreen!</string>
     <string name="splashscreen2">SplashScreen2</string>
+    <string name="text1">Bermain suit melawan</string>
+    <string name="text2">sesama pemain.</string>
+    <string name="text3">Komputer.</string>
+    <string name="inputName">Masukkan Namamu di bawah</string>
+
 </resources>
