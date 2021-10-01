@@ -18,5 +18,6 @@
     <string name="text2">sesama pemain.</string>
     <string name="text3">Komputer.</string>
     <string name="inputName">Masukkan Namamu di bawah</string>
+    <string name="fieldEmpty">Tidak boleh kosong</string>
 
 </resources>
