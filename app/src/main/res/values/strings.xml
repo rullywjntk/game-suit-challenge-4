@@ -12,4 +12,6 @@
     <string name="paper">Paper</string>
     <string name="scissor">Scissor</string>
     <string name="retry">Retry</string>
+    <string name="splashscreen1">SplashScreen!</string>
+    <string name="splashscreen2">SplashScreen2</string>
 </resources>

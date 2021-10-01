@@ -1,10 +1,11 @@
-package com.rully.gamesuitchallenge
+package com.rully.gamesuitchallenge.view.main
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import com.rully.gamesuitchallenge.R
 import com.rully.gamesuitchallenge.databinding.ActivityMainBinding
 import kotlin.random.Random
 
