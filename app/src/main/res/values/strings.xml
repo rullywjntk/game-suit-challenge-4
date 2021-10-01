@@ -2,8 +2,8 @@
     <string name="app_name">Game Suit Challenge</string>
     <string name="title">Gunting\nBatu\nKertas</string>
     <string name="com">COM</string>
-    <string name="versus">Versus</string>
-    <string name="player">Player 1</string>
+    <string name="versus">VS</string>
+    <string name="player">Player</string>
     <string name="draw">DRAW</string>
     <string name="win">Player 1\n Wins</string>
     <string name="lose">COM Win</string>
@@ -19,5 +19,6 @@
     <string name="text3">Komputer.</string>
     <string name="inputName">Masukkan Namamu di bawah</string>
     <string name="fieldEmpty">Tidak boleh kosong</string>
+    <string name="pilih_lawanmu">pilih lawanmu</string>
 
 </resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,138 +8,120 @@
     android:padding="16dp"
     tools:context=".view.main.MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/pilih_lawanmu"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/ivTitle"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/logo_title"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:contentDescription="@string/logo" />
+    <ImageView
+        android:id="@+id/ivMain1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/landing_page1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:contentDescription="@string/player" />
 
-        <TextView
-            android:id="@+id/tvPlayer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/player"
-            android:textSize="20sp"
-            android:textColor="@color/purple_200"
-            android:layout_marginStart="16dp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/ivTitle"
-            app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tvPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvVsPlayer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivMain1"
+        tools:text="@string/player" />
 
-        <ImageButton
-            android:id="@+id/imgBtnRock"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_batu"
-            android:scaleType="centerInside"
-            android:layout_marginTop="16dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintTop_toBottomOf="@id/tvPlayer"
-            app:layout_constraintStart_toStartOf="parent"
-            android:contentDescription="@string/rock" />
+    <TextView
+        android:id="@+id/versus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/versus"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvVsPlayer"
+        app:layout_constraintStart_toEndOf="@id/tvPlayer"
+        app:layout_constraintTop_toBottomOf="@id/tvPlayer"
+        app:layout_constraintTop_toTopOf="@id/tvPlayer"/>
 
-        <ImageView
-            android:id="@+id/imgBtnPaper"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_kertas"
-            android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imgBtnRock"
-            android:contentDescription="@string/paper" />
+    <TextView
+        android:id="@+id/tvVsPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvPlayer"
+        app:layout_constraintTop_toBottomOf="@id/ivMain1" />
 
-        <ImageView
-            android:id="@+id/imgBtnScissor"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_gunting"
-            android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imgBtnPaper"
-            android:contentDescription="@string/scissor" />
 
-        <TextView
-            android:id="@+id/tvVs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="@string/versus"
-            android:textSize="30sp"
-            android:textColor="@color/purple_200"
-            android:layout_marginTop="50dp"
-            android:maxLines="2"
-            android:padding="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+    <ImageButton
+        android:id="@+id/ivMain2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/landing_page2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/versus"
+        android:contentDescription="@string/com" />
 
-        <TextView
-            android:id="@+id/tvCom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/com"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@color/purple_200"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintTop_toTopOf="@id/tvPlayer"
-            app:layout_constraintBottom_toBottomOf="@id/tvPlayer"
-            app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/tvPlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvVsPlayer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivMain2"
+        tools:text="@string/player" />
 
-        <ImageView
-            android:id="@+id/ivRock"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_batu"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="35dp"
-            app:layout_constraintTop_toBottomOf="@id/tvCom"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:contentDescription="@string/rock" />
+    <TextView
+        android:id="@+id/versus1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/versus"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvVsCpu"
+        app:layout_constraintStart_toEndOf="@id/tvPlayer1"
+        app:layout_constraintTop_toBottomOf="@id/tvPlayer1"
+        app:layout_constraintTop_toTopOf="@id/tvPlayer1" />
 
-        <ImageView
-            android:id="@+id/ivPaper"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_kertas"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@id/ivRock"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:contentDescription="@string/paper" />
+    <TextView
+        android:id="@+id/tvVsCpu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/com"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvPlayer1"
+        app:layout_constraintTop_toBottomOf="@id/ivMain2" />
 
-        <ImageView
-            android:id="@+id/ivScissor"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_gunting"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@id/ivPaper"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:contentDescription="@string/scissor" />
-
-        <ImageView
-            android:id="@+id/imgBtnRetry"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:background="@android:color/transparent"
-            android:contentDescription="@string/retry"
-            android:src="@drawable/ic_refresh"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivScissor"
-            app:layout_constraintVertical_bias="0.863" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
