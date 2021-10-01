@@ -20,5 +20,6 @@
     <string name="inputName">Masukkan Namamu di bawah</string>
     <string name="fieldEmpty">Tidak boleh kosong</string>
     <string name="pilih_lawanmu">pilih lawanmu</string>
+    <string name="close">Close</string>
 
 </resources>

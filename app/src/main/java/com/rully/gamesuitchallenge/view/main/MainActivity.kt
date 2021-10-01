@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 import com.rully.gamesuitchallenge.R
 import com.rully.gamesuitchallenge.databinding.ActivityMainBinding
 import com.rully.gamesuitchallenge.view.game.ComActivity
@@ -21,8 +22,21 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val vsPlayer = binding.ivMain1
         val vsCpu = binding.ivMain2
 
+        showPlayerName()
         vsPlayer.setOnClickListener(this)
         vsCpu.setOnClickListener(this)
+
+    }
+
+    private fun showPlayerName() {
+        val name = intent.getStringExtra(EXTRA_NAME)
+        binding.tvPlayer.text = name
+        binding.tvPlayer1.text = name
+        val snackBar = Snackbar.make(binding.root, """Selamat Datang $name""", Snackbar.LENGTH_LONG)
+            snackBar.setAction(getString(R.string.close)){
+                snackBar.dismiss()
+            }
+        snackBar.show()
     }
 
     override fun onClick(p0: View?) {
@@ -36,5 +50,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(comIntent)
             }
         }
+    }
+
+    companion object {
+        const val EXTRA_NAME = "extra_name"
     }
 }

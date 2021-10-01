@@ -34,6 +34,7 @@ class LandingActivity : AppIntro2() {
             etName.requestFocus()
         } else {
             val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra(MainActivity.EXTRA_NAME, name)
             startActivity(intent)
         }
     }
