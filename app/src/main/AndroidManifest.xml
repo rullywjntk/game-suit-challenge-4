@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GameSuitChallenge">
         <activity
+            android:name=".view.game.ComActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.game.PlayerActivity"
+            android:exported="true" />
+        <activity
             android:name=".view.landingpage.LandingActivity"
             android:exported="true" />
         <activity
