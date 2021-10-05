@@ -46,7 +46,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(playerIntent)
             }
             R.id.ivMain2 -> {
+                val name = intent.getStringExtra(EXTRA_NAME)
                 val comIntent = Intent(this, ComActivity::class.java)
+                comIntent.putExtra(ComActivity.EXTRA_NAME, name)
                 startActivity(comIntent)
             }
         }

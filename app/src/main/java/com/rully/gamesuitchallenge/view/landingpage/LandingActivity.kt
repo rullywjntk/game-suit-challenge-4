@@ -26,7 +26,6 @@ class LandingActivity : AppIntro2() {
 
     override fun onDonePressed(currentFragment: Fragment?) {
         super.onDonePressed(currentFragment)
-
         etName = findViewById(R.id.etName)
         val name = etName.text.toString()
         if (name.isEmpty()) {
