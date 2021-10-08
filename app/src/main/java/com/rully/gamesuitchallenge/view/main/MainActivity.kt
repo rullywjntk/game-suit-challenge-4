@@ -42,7 +42,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(p0: View?) {
         when(p0?.id) {
             R.id.ivMain1 -> {
+                val name = intent.getStringExtra(EXTRA_NAME)
                 val playerIntent = Intent(this, PlayerActivity::class.java)
+                playerIntent.putExtra(PlayerActivity.EXTRA_NAME, name)
                 startActivity(playerIntent)
             }
             R.id.ivMain2 -> {

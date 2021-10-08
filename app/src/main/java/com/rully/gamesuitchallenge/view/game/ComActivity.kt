@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
@@ -113,6 +114,7 @@ class ComActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun showWinner() {
+        val name = intent.getStringExtra(EXTRA_NAME)
         val dialogLayoutBinding = DialogLayoutBinding.inflate(layoutInflater)
         val dialog = AlertDialog.Builder(this)
             .apply {
@@ -121,12 +123,15 @@ class ComActivity : AppCompatActivity(), View.OnClickListener {
             .create()
         if (draw) {
             dialogLayoutBinding.tvResult.text = getString(R.string.draw)
+            Toast.makeText(this, getString(R.string.draw), Toast.LENGTH_SHORT).show()
         } else {
             if (userWinner) {
-                dialogLayoutBinding.tvName.text = intent.getStringExtra(EXTRA_NAME)
+                dialogLayoutBinding.tvName.text = name
                 dialogLayoutBinding.tvResult.text = getString(R.string.win)
+                Toast.makeText(this, "$name Win", Toast.LENGTH_SHORT).show()
             } else {
-                dialogLayoutBinding.tvResult.text = getString(R.string.lose)
+                dialogLayoutBinding.tvResult.text = getString(R.string.com_win)
+                Toast.makeText(this, getString(R.string.com_win), Toast.LENGTH_SHORT).show()
             }
         }
         dialogLayoutBinding.btnRetry.setOnClickListener {
@@ -136,6 +141,7 @@ class ComActivity : AppCompatActivity(), View.OnClickListener {
         }
         dialogLayoutBinding.btnMenu.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra(MainActivity.EXTRA_NAME, name)
             startActivity(intent)
         }
         dialog.show()
