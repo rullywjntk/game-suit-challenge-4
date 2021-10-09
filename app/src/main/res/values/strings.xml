@@ -5,8 +5,8 @@
     <string name="versus">VS</string>
     <string name="player">Player</string>
     <string name="draw">DRAW</string>
-    <string name="win">Player 1\n Wins</string>
-    <string name="lose">COM Win</string>
+    <string name="win">Wins</string>
+    <string name="com_win">COM Win</string>
     <string name="logo">Logo</string>
     <string name="rock">Rock</string>
     <string name="paper">Paper</string>
@@ -20,5 +20,11 @@
     <string name="inputName">Masukkan Namamu di bawah</string>
     <string name="fieldEmpty">Tidak boleh kosong</string>
     <string name="pilih_lawanmu">pilih lawanmu</string>
+    <string name="close">Close</string>
+    <string name="hasil_permainan">Hasil Permainan</string>
+    <string name="main_lagi">Main Lagi</string>
+    <string name="kembali_ke_menu">Kembali ke menu</string>
+    <string name="player2">Player 2</string>
+    <string name="player2_win">Player 2 Win</string>
 
 </resources>

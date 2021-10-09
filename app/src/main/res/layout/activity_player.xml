@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.game.PlayerActivity">
+
+    <ImageView
+        android:id="@+id/ivTitle"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/purple_200"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivTitle"
+        tools:text="@string/player" />
+
+    <ImageButton
+        android:id="@+id/imgBtnRock"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/rock"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_batu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPlayer" />
+
+    <ImageView
+        android:id="@+id/imgBtnPaper"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/paper"
+        android:src="@drawable/ic_kertas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgBtnRock" />
+
+    <ImageView
+        android:id="@+id/imgBtnScissor"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/scissor"
+        android:src="@drawable/ic_gunting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgBtnPaper" />
+
+    <TextView
+        android:id="@+id/tvVs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:maxLines="2"
+        android:padding="10dp"
+        android:text="@string/versus"
+        android:textColor="@color/purple_200"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/player2"
+        android:textColor="@color/purple_200"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tvPlayer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvPlayer" />
+
+    <ImageButton
+        android:id="@+id/imgBtnRock1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/rock"
+        android:src="@drawable/ic_batu"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPlayer2" />
+
+    <ImageButton
+        android:id="@+id/imgBtnPaper1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/paper"
+        android:src="@drawable/ic_kertas"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgBtnRock1" />
+
+    <ImageButton
+        android:id="@+id/imgBtnScissor1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/scissor"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_gunting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgBtnPaper1" />
+
+    <ImageView
+        android:id="@+id/imgBtnRetry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/retry"
+        android:src="@drawable/ic_refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgBtnScissor1"
+        app:layout_constraintVertical_bias="0.863" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

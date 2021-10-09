@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp"
+    tools:context=".view.game.ComActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivTitle"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/logo" />
+
+        <TextView
+            android:id="@+id/tvPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/player"
+            android:textSize="20sp"
+            android:textColor="@color/purple_200"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/ivTitle"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/imgBtnRock"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_batu"
+            android:scaleType="centerInside"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@id/tvPlayer"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/rock" />
+
+        <ImageView
+            android:id="@+id/imgBtnPaper"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_kertas"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgBtnRock"
+            android:contentDescription="@string/paper" />
+
+        <ImageView
+            android:id="@+id/imgBtnScissor"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_gunting"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgBtnPaper"
+            android:contentDescription="@string/scissor" />
+
+        <TextView
+            android:id="@+id/tvVs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/versus"
+            android:textSize="30sp"
+            android:textColor="@color/purple_200"
+            android:layout_marginTop="50dp"
+            android:maxLines="2"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvCom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/com"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_200"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="@id/tvPlayer"
+            app:layout_constraintBottom_toBottomOf="@id/tvPlayer"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivRock"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_batu"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="35dp"
+            app:layout_constraintTop_toBottomOf="@id/tvCom"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/rock" />
+
+        <ImageView
+            android:id="@+id/ivPaper"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_kertas"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/ivRock"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/paper" />
+
+        <ImageView
+            android:id="@+id/ivScissor"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_gunting"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/ivPaper"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/scissor" />
+
+        <ImageView
+            android:id="@+id/imgBtnRetry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/retry"
+            android:src="@drawable/ic_refresh"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivScissor"
+            app:layout_constraintVertical_bias="0.863" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

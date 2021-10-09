@@ -26,7 +26,6 @@ class LandingActivity : AppIntro2() {
 
     override fun onDonePressed(currentFragment: Fragment?) {
         super.onDonePressed(currentFragment)
-
         etName = findViewById(R.id.etName)
         val name = etName.text.toString()
         if (name.isEmpty()) {
@@ -34,6 +33,7 @@ class LandingActivity : AppIntro2() {
             etName.requestFocus()
         } else {
             val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra(MainActivity.EXTRA_NAME, name)
             startActivity(intent)
         }
     }
